@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_deal_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/secondary_light"
+        android:padding="10dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/hl_general"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_image_container"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:cardCornerRadius="20dp">
+
+                <ImageView
+                    android:id="@+id/iv_image_deal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_launcher_background" />
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/vl_information"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tv_title_deal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/deal_title"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/hl_prices"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_old_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/original_price"
+                        android:textAlignment="center"
+                        android:textColor="@color/red_price"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/iv_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/baseline_keyboard_double_arrow_right_24" />
+
+                    <TextView
+                        android:id="@+id/tv_new_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/deal_price"
+                        android:textAlignment="center"
+                        android:textColor="@color/primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
